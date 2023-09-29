@@ -8,7 +8,9 @@ const port = process.env.PORT || 5001;
 
 const dotenv = require("dotenv");
 dotenv.config();
-app.use(cors());
+app.use(cors({
+  origin : ["https://strm-vdo.vercel.app"],
+}));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
