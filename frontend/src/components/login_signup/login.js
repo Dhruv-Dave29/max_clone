@@ -56,7 +56,8 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   // Event handler for form submission
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
       // Send a login request to the server
       await axios.post("https://strm-vdo-be.onrender.com/api/login", {
