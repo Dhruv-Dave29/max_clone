@@ -1,0 +1,8 @@
+html,body{
+  background-image: linear-gradient(to right, purple, blue);
+}
+
+.App {
+  color: white;
+  font-family: sans-serif;
+}
