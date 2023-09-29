@@ -6,7 +6,7 @@ var f=0
 const setwatchlist=async ()=>{
   try {
     // Send a login request to the server
-    const data1 = await axios.post("http://localhost:5001/api/getwatchlist", {
+    const data1 = await axios.post("https://strm-vdo-be.onrender.com/api/getwatchlist", {
       username: localStorage.getItem('loggedInUsername')
     });
     localStorage.setItem('watchlist', data1.data.watchlist);
@@ -39,7 +39,7 @@ const WatchlistPage = () => {
           watchlist: localStorage.getItem("watchlist"), // You can pass your watchlist data here
         };
         const response = await axios.post(
-          "http://localhost:5001/api/watchlist",
+          "https://strm-vdo-be.onrender.com/api/watchlist",
           watchlistData
         );
         if (response.status === 200) {

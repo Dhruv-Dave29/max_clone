@@ -203,7 +203,7 @@ const Movie = () => {
           watchlist: localStorage.getItem("watchlist"),
         };
         const response = await axios.post(
-          "http://localhost:5001/api/watchlist",
+          "hhttps://strm-vdo-be.onrender.com/api/watchlist",
           watchlistData
         );
         if (response.status === 200) {

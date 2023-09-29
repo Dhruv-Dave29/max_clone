@@ -65,7 +65,7 @@ function Signup() {
 
     try {
       // Send a signup request to the server
-      await axios.post("http://localhost:5001/api/signup",{username : username, password : password});
+      await axios.post("https://strm-vdo-be.onrender.com/api/signup",{username : username, password : password});
   
       if (username) {
         // Save the username in local storage
@@ -75,7 +75,7 @@ function Signup() {
         setUsername("");
         setPassword("");
         window.location.reload();
-        window.location.href="http://localhost:3000/movies/popular";
+        window.location.href="https://strm-vdo.vercel.app/movies/popular";
       } else {
         // Handle server response with login failure
         alert("sign up failed. Please check your credentials.");

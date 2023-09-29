@@ -59,7 +59,7 @@ function Login() {
   const handleLogin = async () => {
     try {
       // Send a login request to the server
-      await axios.post("http://localhost:5001/api/login", {
+      await axios.post("https://strm-vdo-be.onrender.com/api/login", {
         username:username,
         password:password,
       });
@@ -69,7 +69,7 @@ function Login() {
         // Display a success message and reset input fields
         setUsername("");
         setPassword("");
-        window.location.href="http://localhost:3000/movies/popular";
+        window.location.href="https://strm-vdo.vercel.app/movies/popular";
       } else {
         // Handle server response with login failure
         alert("Login failed. Please check your credentials.");
